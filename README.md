@@ -2,15 +2,6 @@
 
 This is my personal repo for solving Codewars katas in Javascript/Typescript
 
-## How to use
-
-1. Fork this repo to your own account
-2. Clone your forked repo to your local machine
-3. Install dependencies with `npm install`
-4. Create a new branch for each kata you want to solve
-5. Create the tests for the kata
-6. Solve the kata
-
 ## Specifications
 
 - Each branch has a different kata

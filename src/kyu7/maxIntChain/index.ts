@@ -1,20 +1,10 @@
 export default function maxIntChain(n: number): number {
   if (n < 5) return -1;
+  const half = n / 2;
+  const isEven = n % 2 === 0;
 
-  let half = 0;
-  let biggest = 0;
-  let chain = 0;
-
-  const isOdd = n % 2 === 1;
-  if (isOdd) {
-    half = n / 2;
-    biggest = Math.ceil(half);
-    chain = biggest - 1;
-
-  } else {
-    half = n / 2;
-    biggest = half + 1;
-    chain = half - 1;
+  if (isEven) {
+    return (half + 1) * (half - 1);
   }
-  return biggest * chain;
+  return Math.ceil(half) * Math.floor(half);
 }

@@ -10,8 +10,22 @@ describe('beeramid', () => {
     expect(beeramid(455, 5)).toBe(6);
     expect(beeramid(4, 4)).toBe(1);
     expect(beeramid(3, 4)).toBe(0);
+  });
+
+  it('should return 0 if there are no beers', () => {
     expect(beeramid(0, 4)).toBe(0);
+    expect(beeramid(0, 0.5)).toBe(0);
+  });
+
+  it('should return 0 if the price is negative', () => {
+    expect(beeramid(3, -1)).toBe(0);
+  });
+
+  it('should return 0 if bonus is 0', () => {
+    expect(beeramid(0, 4)).toBe(0);
+  });
+
+  it('should return 0 if bonus is negative', () => {
     expect(beeramid(-1, 4)).toBe(0);
   });
 });
-
